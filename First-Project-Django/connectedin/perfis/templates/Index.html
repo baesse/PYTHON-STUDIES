@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+    </head>
+    <bod>
+        <h1>Bem vindo</h1>
+        <ul>
+            {% if users %}
+                {% for user in users %}
+                    <li>
+                        <a href="{% url 'show' user.id %}" >
+                            <strong>
+                                {{user.nome}} email:{{user.email}} telefone:{{user.telefone}} Empresa:{{user.nome_empresa}}
+                            </strong>
+                        </a>
+                    </li>
+                {% endfor %}
+            {% else %}
+                Nenhum perfil
+            {% endif %}
+        </ul>
+    </bod>
+</html>

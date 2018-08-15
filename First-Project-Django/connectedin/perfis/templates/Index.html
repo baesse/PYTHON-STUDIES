@@ -1,9 +1,6 @@
-<html>
-    <head>
-
-    </head>
-    <bod>
-        <h1>Bem vindo</h1>
+{% extends "base.html" %}
+{% block body %}
+    <div class="col-lg-12">
         <ul>
             {% if users %}
                 {% for user in users %}
@@ -19,5 +16,5 @@
                 Nenhum perfil
             {% endif %}
         </ul>
-    </bod>
-</html>
+    </div>
+{% endblock %}
